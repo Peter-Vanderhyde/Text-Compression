@@ -9,10 +9,10 @@ The structures used were:
 1. The program takes in a string. This would preferably be a long string.
 2. A frequency table is used to find how many times each character appears in the string.
 3. The characters are put in a priority queue so it can sort them based on their frequency.
-4. A binary tree is constructed of all of the characters based on their frequency. Highest frequency are closer to the top and lowest frequency are at the bottom leaves.
+4. A binary tree is constructed of all of the characters based on their frequency. Highest frequency are closer to the root and lowest frequency are at the bottom leaves.
 5. Huffman encoding is then used to assign each character a bit code by traversing the tree. It starts at the root of the tree and, for every character, it traverses the tree until it reaches the leaf. Every time it moves to the left child, a 0 is appended to that character's code. Every right child traversal appends a 1. In the end, the most frequent characters have the shortest bit codes and the least frequent have the longest.  
-6. Once the codes have been determined, all it does is swap out the bits that would normally be stored for each of the characters with the code for that character. This way, in the case of e, it only has to store 3 bits each time instead of 8 (See example output).
-7. In order to decode the bits, as long as it still has the same binary tree that it used to create the codes, it can simply traverse the tree, going left or right for each 0 and 1, until it reaches a leaf. It saves that character and then goes back to the tree root and continues.
+6. Once the codes have been determined, all it does is swap out the bits that would normally be stored for each of the characters with the code for that character. This way, (see the example below) in the case of e, it only has to store 3 bits each time instead of 8.
+7. In order to decode the bits, as long as the binary tree used to encode the string is known, it can simply traverse the tree, going left or right for each 0 and 1, until it reaches a leaf. It saves that character and then goes back to the tree root and continues.
 
 ## Example Output
 ```
