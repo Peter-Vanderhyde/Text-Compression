@@ -1,4 +1,5 @@
-# Text Compression Final
+# Text Compression Final  
+*Peter Vanderhyde, Fall 2020*
 ## About
 This is my final project for our Data Structures class. The purpose of the project was to combine many of the structures that we had learned about into a text compression project.
 The structures used were:
